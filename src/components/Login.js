@@ -16,7 +16,7 @@ function Login() {
     e.preventDefault(); // Prevent the default form submission
 
     try {
-      const res = await fetch('http://localhost:8082/login', {
+      const res = await fetch('https://user-authentication-mern-backend.onrender.com/login', {
         method: 'POST',
         body: JSON.stringify(form),
         headers: {

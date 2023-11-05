@@ -16,7 +16,7 @@ function Signup() {
     e.preventDefault(); // Prevent the default form submission
 
     try {
-      const res = await fetch('http://localhost:8082/register', {
+      const res = await fetch('https://user-authentication-mern-backend.onrender.com/register', {
         method: 'POST',
         body: JSON.stringify(form),
         headers: {
