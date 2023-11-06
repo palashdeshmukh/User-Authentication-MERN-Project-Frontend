@@ -31,6 +31,7 @@ function Login() {
         console.log('After navigate');
       } else {
         // Handle login failure or server errors
+        setMessage('User Not Found Pls Signup');
         console.log('Login failed');
       }
     } catch (error) {
