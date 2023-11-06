@@ -32,7 +32,7 @@ function Login() {
         console.log('After navigate');
       } else {
         // Handle login failure or server errors
-        setMessage('User Not Found Pls Signup');
+        setMessage('User not found. Please sign up.');
         console.log('Login failed');
       }
     } catch (error) {
