@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
   const [form, setForm] = useState({ username: '', password: '' });
+  const [message, setMessage] = useState(''); // To store the registration message
   const navigate = useNavigate();
 
   const handleForm = (e) => {
@@ -44,6 +45,7 @@ function Login() {
     <div style={{ height: "100vh" }} className='p-3 d-flex justify-content-center align-items-center user-select-none'>
       <form className='shadow rounded px-5 py-4 w-auto' onSubmit={handleSubmit}>
         <h1 className='text-center pb-2'>Login</h1>
+        {message && <p className='text-center'>{message}</p>}
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
           <input type="email" name='username' onChange={handleForm} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
